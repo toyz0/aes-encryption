@@ -27,7 +27,7 @@ namespace Encryption
         public static string Decrypt(string cipherText)
         {
             byte[] strToDecryptByte = Convert.FromBase64String(cipherText);
-            string plainText = string.Empty;
+            string plaintext = string.Empty;
 
             using (MemoryStream ms = new MemoryStream())
             {
@@ -37,11 +37,11 @@ namespace Encryption
                     cs.FlushFinalBlock();
                     Encoding encoding = Encoding.UTF8;
 
-                    plainText = encoding.GetString(ms.ToArray());
+                    plaintext = encoding.GetString(ms.ToArray());
                 }
             }
 
-            return plainText;
+            return plaintext;
         }
 
         /// <summary>
