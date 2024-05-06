@@ -7,9 +7,9 @@ namespace Encryption
     {
         private static readonly string _key = "my_16bytes_key_!";
 
-        public static string Encrypt(string plainText)
+        public static string Encrypt(string plaintext)
         {
-            byte[] strToEncryptByte = Encoding.UTF8.GetBytes(plainText);
+            byte[] strToEncryptByte = Encoding.UTF8.GetBytes(plaintext);
             byte[] result = null;
             using (MemoryStream ms = new MemoryStream())
             {
